@@ -56,7 +56,7 @@ export default function App() {
       let isNew = true;
 
       list.forEach((obj) => {
-        if (obj.Task == data.task) {
+        if (obj.Task === data.task) {
           isNew = false;
         }
       });
@@ -98,7 +98,7 @@ export default function App() {
     setToggleBtn(true);
     setEditId(getid);
 
-    let editeditem = list.find((item) => item.id == getid);
+    let editeditem = list.find((item) => item.id === getid);
     // console.log(editeditem, 'editeditem');
     setData({
       task: editeditem.Task,
