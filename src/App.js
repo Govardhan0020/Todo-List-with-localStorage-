@@ -32,7 +32,7 @@ export default function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(data, 'data');
+    // console.log(data, 'data');
     if (!data.task || !data.description) {
       alert(' please fill the inputs...');
     } else if (data && toggleBtn) {
@@ -51,7 +51,7 @@ export default function App() {
 
       setEditId(null);
       setToggleBtn(false);
-      console.log(editedData, 'edit');
+      // console.log(editedData, 'edit');
     } else {
       let isNew = true;
 
@@ -82,24 +82,24 @@ export default function App() {
       description: '',
     });
 
-    console.log(list, 'list');
+    // console.log(list, 'list');
   };
 
   const DeleteItem = (getid) => {
-    console.log(getid, 'deleteid');
+    // console.log(getid, 'deleteid');
     let deleted = list.filter((item) => item.id !== getid);
-    console.log(deleted, 'delitem');
+    // console.log(deleted, 'delitem');
     localStorage.setItem('tasklist', JSON.stringify(deleted));
     setList(deleted);
   };
 
   const EditItem = (getid) => {
-    console.log(getid, 'editid');
+    // console.log(getid, 'editid');
     setToggleBtn(true);
     setEditId(getid);
 
     let editeditem = list.find((item) => item.id == getid);
-    console.log(editeditem, 'editeditem');
+    // console.log(editeditem, 'editeditem');
     setData({
       task: editeditem.Task,
       description: editeditem.Descrip,
