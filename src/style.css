@@ -13,8 +13,23 @@
     justify-content: space-evenly;
   }
 }
+@media screen and (min-width: 821px) and (max-width: 991px) {
+  .main {
+    width: 50%;
+    margin: auto;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .submitbtn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
 
-@media screen and (min-width: 821px) and (max-width: 1400px) {
+@media screen and (min-width: 992px) and (max-width: 1500px) {
   .main {
     width: 44%;
     margin: auto;
