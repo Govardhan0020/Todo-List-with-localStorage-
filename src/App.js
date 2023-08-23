@@ -16,6 +16,7 @@ export default function App() {
 
   useEffect(() => {
     const locData = JSON.parse(localStorage.getItem('tasklist'));
+
     if (locData) {
       setList(locData);
     }
@@ -23,6 +24,9 @@ export default function App() {
 
   // let locData = JSON.parse(localStorage.getItem("tasklist"))
   // console.log(locData, "local data")
+  // const locData1 = JSON.parse(localStorage.getItem('tasklist1'));
+  // console.log(locData1,  "local1 ")
+
 
   const { task, description } = data;
 
@@ -72,6 +76,7 @@ export default function App() {
         listData.push(newItem);
         setList(listData);
         localStorage.setItem('tasklist', JSON.stringify(listData));
+        // localStorage.setItem('tasklist1', JSON.stringify(list));
       } else {
         alert('Task is already exist...');
       }
