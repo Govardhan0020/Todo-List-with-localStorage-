@@ -75,8 +75,8 @@ export default function App() {
         let listData = [...list];
         listData.push(newItem);
         setList(listData);
-        localStorage.setItem('tasklist', JSON.stringify(listData));
-        // localStorage.setItem('tasklist1', JSON.stringify(list));
+       // localStorage.setItem('tasklist', JSON.stringify(listData));
+         localStorage.setItem('tasklist1', JSON.stringify(list));
       } else {
         alert('Task is already exist...');
       }
